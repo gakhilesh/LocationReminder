@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center_vertical"
+    android:orientation="vertical" >
+
+   
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/etFindLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.50"
+                android:hint="Search"
+                android:inputType="text" />
+
+            <Button
+                android:id="@+id/bFindLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_search" />
+
+            <Button
+                android:id="@+id/bCurrentLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_menu_mylocatiokn" />
+        </LinearLayout>
+         <com.google.android.maps.MapView
+        android:id="@+id/maps"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:apiKey="0sgr0Z76auT2rxtjeFM-M4FVh4k9YBf0N-Ofxvg"
+        android:clickable="true"
+        android:enabled="true" />
+    </LinearLayout>
+
+        <SlidingDrawer
+            android:id="@+id/slidingDrawer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:animateOnClick="true"
+            android:visibility="invisible"
+            android:content="@+id/contentDrawer"
+            android:handle="@+id/handleDrawer" >
+            <ImageButton
+                android:id="@+id/handleDrawer"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/expander_ic_maximized"
+                />
+           
+            <LinearLayout
+                android:id="@+id/contentDrawer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+              
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/etAccuracy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.40"
+                        android:hint="Set Accuracy"
+                        android:inputType="numberDecimal" />
+
+                    <Spinner
+                        android:id="@+id/setUnits"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="0.60" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/etLocationName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="LOCATION NAME" />
+                
+                <EditText
+                    android:id="@+id/etNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="ADD NOTE" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/setRingtone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".40"
+                        android:drawableLeft="@drawable/ic_menu_add"
+                        android:text="Set Ringtone" />
+
+                    <Button
+                        android:id="@+id/saveAlarm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".60"
+                        android:text="Save" />
+                </LinearLayout>
+                <Button 
+                    	android:id="@+id/deleteAlarm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Delete"
+                    />
+            </LinearLayout>
+        </SlidingDrawer>
+
+</FrameLayout>

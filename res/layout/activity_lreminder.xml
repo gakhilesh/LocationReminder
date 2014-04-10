@@ -1,0 +1,83 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LReminder"
+     >
+
+    <TabHost
+        android:id="@+id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <FrameLayout
+                    android:id="@+id/alarm_tab"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical"
+                    android:layout_gravity="bottom"
+                    android:gravity="bottom" >
+                
+                    <ListView
+                        android:id="@+id/alarmlist"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray" >
+                    </ListView>
+                    
+                    <Button
+                        android:id="@+id/setalarm"
+                        android:layout_gravity="bottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+			            android:drawableLeft="@drawable/ic_menu_add"
+                        android:text="Set Alarm" />
+                </FrameLayout>
+                 <FrameLayout
+                    android:id="@+id/task_tab"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical"
+                    android:tag="TASKS" 
+                    android:gravity="bottom">
+                    
+                    <ListView
+                        android:id="@+id/tasklist"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/darker_gray" >
+                    </ListView>
+
+                    <Button
+                        android:id="@+id/settask"
+                        android:layout_gravity="bottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+			            android:drawableLeft="@drawable/ic_menu_add"
+                        android:text="Add Tasks" />
+                </FrameLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+
+    </TabHost>
+
+</LinearLayout>
