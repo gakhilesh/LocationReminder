@@ -28,7 +28,7 @@ public class DBController {
 		this.nexttime=nexttime;
 		this.currentlyset=currentlyset;
 		this.uri=uri;
-		//Log.d(DBController.class.getSimpleName(),"Katrina Boom Boom"+longitude+"\n"+latitude+"\n"+accuracy+"\n"+units+"\n"+flag+"\n"+tasks+"\n"+nexttime+"\n"+currentlyset);
+		//Log.d(DBController.class.getSimpleName(),"Boom Boom"+longitude+"\n"+latitude+"\n"+accuracy+"\n"+units+"\n"+flag+"\n"+tasks+"\n"+nexttime+"\n"+currentlyset);
 	}
 	
 	
